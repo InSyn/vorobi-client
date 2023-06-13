@@ -1,0 +1,135 @@
+@font-face {
+  font-family: "Bahnschrift";
+  src: url("./fonts/Bahnschrift.ttf") format("ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Bahnschrift, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.slick-prev,
+.slick-next {
+  display: flex !important;
+  align-items: center !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+.slick-prev span, .slick-prev svg,
+.slick-next span, .slick-next svg {
+  transition: all 92ms;
+}
+
+.slick-prev:hover span,
+.slick-next:hover span {
+  color: var(--textarea-color);
+}
+.slick-prev:hover svg,
+.slick-next:hover svg {
+  fill: var(--textarea-color);}
+
+.arrow svg {
+  height: 48px;
+}
+.arrow span {
+  height: auto;
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+.slick-prev svg {
+  margin-left: 8px;
+}
+.slick-next svg {
+  margin-right: 8px;
+}
+
+.news .slick-prev,
+.news .slick-next {
+  top: auto !important;
+  bottom: 0 !important;
+}
+
+.news .slick-prev {
+  left: 35px !important;
+  right: auto !important;
+}
+
+.news .slick-next {
+  left: 235px !important;
+  right: auto !important;
+}
+
+@media (max-width: 991px) {
+  .news .slick-slider.slider {
+    height: calc(100vh - 40px);
+  }
+
+  .news .slick-prev {
+    left: auto !important;
+    right: calc(50vw + 20px) !important;
+  }
+
+  .news .slick-next {
+    left: calc(50vw + 20px) !important;
+    right: auto !important;
+  }
+}
+
+.infrastructureSlider .slick-prev {
+  top: auto;
+  bottom: 30px;
+  left: auto !important;
+  right: 325px;
+}
+
+.infrastructureSlider .slick-next {
+  top: auto;
+  bottom: 30px;
+}
+
+@media (max-width: 991px) {
+  .infrastructureSlider .slick-prev {
+    top: auto;
+    bottom: -60px;
+    left: 50px !important;
+    right: auto;
+  }
+
+  .infrastructureSlider .slick-next {
+    top: auto;
+    bottom: -60px;
+    left: 225px;
+    right: auto;
+  }
+}

@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  padding: 80px 40px;
+  min-height: 100vh;
+  background: var(--header-mobi-color);
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  gap: 80px;
+}
+
+.frame {
+  width: 50%;
+  aspect-ratio: 16 / 9;
+}
+
+.backLink {
+  position: absolute;
+  color: var(--text-color);
+  top: 20px;
+  left: 20px;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 911px) {
+  .container {
+
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  .frame {
+    width: 100%;
+  }
+}

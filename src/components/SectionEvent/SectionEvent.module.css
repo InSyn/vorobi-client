@@ -1,0 +1,185 @@
+.Section {
+  background-color: var(--bg-color);
+  display: flex;
+  height: 100vh;
+  gap: 30px;
+}
+
+.Triangle {
+  position: absolute;
+  width: 150px;
+  bottom: 30px;
+  right: 0;
+  pointer-events: none;
+}
+
+.Left {
+  width: 40%;
+  height: 100%;
+  padding-left: 15px;
+  padding-top: 40px;
+}
+
+.Right {
+  width: 75%;
+  height: 100%;
+
+  padding-right: 40px;
+}
+.RightContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid var(--section-border-color);
+  position: relative;
+}
+.Content {
+  border-top: 8px solid var(--section-border-color);
+  padding-top: 15px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  padding-left: 20px;
+  border-bottom: 8px solid var(--section-border-color);
+}
+.Title {
+  font-size: 35px;
+  color: #029fe2;
+  text-align: right;
+  font-weight: bold;
+}
+
+.LeftDate {
+  font-size: 1.8rem;
+  color: var(--green-color);
+  margin-top: 15px;
+}
+
+.Events {
+  color: var(--text-color);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  overflow: auto;
+}
+
+.Event {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.EventsPlaceholder {
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .Section {
+    flex-direction: column;
+  }
+
+  .Right {
+    width: 100%;
+  }
+
+  .RightContent {
+    padding-bottom: 50px;
+  }
+
+  .Events {
+    padding-right: 10px;
+  }
+
+  .Event {
+    font-size: 16px;
+  }
+
+  .EventsPlaceholder {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .Section {
+    height: auto;
+    padding-right: 20px;
+    position: relative;
+  }
+  .Section::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 50%;
+    height: 4px;
+    background-color: var(--section-border-color);
+  }
+  .Section::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 15px;
+    width: 50%;
+    height: 4px;
+    background-color: var(--section-border-color);
+  }
+  .Left {
+    width: 100%;
+    padding: 0;
+    padding-left: 20px;
+    padding-top: 30px;
+  }
+  .Right {
+    width: 100%;
+    padding: 0;
+  }
+
+  .Content {
+    padding: 0;
+    border: none;
+    gap: 25px;
+  }
+
+  .RightContent {
+    padding: 0;
+    border: none;
+  }
+
+  .Title {
+    font-size: 20px;
+    text-align: left;
+  }
+
+  .Events {
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  .Triangle {
+    width: 50px;
+    bottom: -60px;
+    right: 10px;
+  }
+  .LeftDate {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .Left {
+    padding-left: 10px;
+  }
+  .Section {
+    padding-right: 0;
+  }
+}

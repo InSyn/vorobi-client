@@ -1,0 +1,167 @@
+.Hero {
+  height: calc(100vh - 70px);
+  background: var(--header-mobi-color);
+  position: relative;
+  color: #fefefe;
+  overflow: hidden;
+  overflow: clip;
+}
+.Hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.bgImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  /*transition: .4s ease;*/
+  /*opacity: 0;*/
+}
+
+/*.bg[data-active-image-index="0"] .bgImage1 {*/
+/*  opacity: 1;*/
+/*}*/
+
+/*.bg[data-active-image-index="1"] .bgImage2 {*/
+/*  opacity: 1;*/
+/*}*/
+
+/*.bg[data-active-image-index="2"] .bgImage3 {*/
+/*  opacity: 1;*/
+/*}*/
+
+.HeroContent {
+  position: relative;
+  z-index: 1;
+}
+.Top {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+}
+
+.Meteo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-top: 30px;
+}
+.MeteoIcon {
+  background: url("./Шкала_погоды.png") no-repeat;
+  background-size: contain;
+  font-size: 30px;
+  width: 130px;
+  height: 77px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  line-height: 20px;
+}
+.MeteoInfo {
+  display: flex;
+}
+.MeteoValues {
+  display: flex;
+  flex-direction: column;
+}
+.MeteoValue {
+  align-self: flex-end;
+  margin-left: 10px;
+}
+
+.Content {
+  margin-left: auto;
+  width: max-content;
+  margin-right: 105px;
+}
+.Text {
+  font-size: 45px;
+  margin-bottom: 80px;
+  font-weight: bold;
+}
+.Button {
+  background: transparent;
+  font-size: 25px;
+  color: #d7fd3d;
+  padding: 12px 18px;
+  border: 2px solid #d7fd3d;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .Meteo {
+    margin: 0;
+  }
+
+  .Content {
+    width: auto;
+    margin: 0;
+    padding: 0 20px;
+  }
+
+  .Text {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .Hero {
+    height: 90vh;
+    padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .MeteoIcon {
+    font-size: 20px;
+    width: 100px;
+    height: 60px;
+  }
+
+  .Meteo {
+    gap: 15px;
+  }
+
+  @media screen and (max-width: 360px) {
+    .Top {
+      padding: 20px 10px;
+    }
+
+    .MeteoIcon {
+      font-size: 18px;
+      width: 80px;
+      height: 50px;
+    }
+    .Meteo {
+      gap: 10px;
+    }
+
+    .Text {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -1,0 +1,113 @@
+.Calendar {
+  color: var(--text-color);
+}
+.Date {
+  text-align: right;
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.Inner {
+  display: grid;
+  gap: 4px;
+  position: relative;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.LeftArrow,
+.RightArrow {
+  position: absolute;
+  top: 50%;
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+.LeftArrow {
+  left: -80px;
+}
+
+.RightArrow {
+  right: -80px;
+}
+
+.DateName {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.Day {
+  width: 4vw;
+  height: 4vw;
+  display: flex;
+  background: rgba(255, 255, 255, 0.1);
+  color: currentColor;
+  cursor: pointer;
+  font-family: inherit;
+
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--section-border-color);
+}
+
+.SecondaryDay {
+  opacity: 0.4;
+  background: none;
+}
+
+.CurrentDay {
+  background-color: rgba(2, 159, 227, 0.1);
+  border: 1px solid #029fe2;
+  color: var(--calendar-cur-day-color);
+}
+
+.SelectedDay {
+  color: #434242;
+  background-color: var(--green-color);
+}
+
+@media screen and (max-width: 1100px) {
+  .Date {
+    text-align: center;
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .LeftArrow,
+  .RightArrow {
+    position: relative;
+    width: 15px;
+    margin-top: 35px;
+    margin-bottom: 8px;
+    left: 305%;
+    transform: translateY(-40px);
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .Day {
+    width: 35px;
+    height: 35px;
+  }
+
+  .DateName {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .Day {
+    width: 30px;
+    height: 30px;
+  }
+
+  .Inner {
+    gap: 5px;
+  }
+  .MobileCalendar {
+    gap: 10px;
+  }
+}

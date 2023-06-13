@@ -1,0 +1,45 @@
+.DarkTheme {
+  --text-color: #fff;
+  --bg-color: #030302;
+  --header-icon-bg: #212121;
+  --header-mobi-color: #212121;
+  --section-border-color: #fefefe;
+
+  --green-color: #d7fd3d;
+
+  --calendar-cur-day-bg: transparent;
+  --calendar-cur-day-color: #029fe2;
+
+  --contact-bg-left-color: #212121;
+  --contact-bg-right-color: #3c3c3c;
+
+  --textarea-color: #313130;
+
+  --footer-bg: #3c3c3c;
+
+  --mobile-menu-color: #212121;
+  --mobile-menu-bg: #fefefe;
+}
+
+.LightTheme {
+  --text-color: #212121;
+  --bg-color: #e5e6e6;
+  --header-icon-bg: #c5c6c6;
+  --header-mobi-color: #e5e6e6;
+  --section-border-color: #8e8586;
+
+  --green-color: #a4c71a;
+
+  --calendar-cur-day-bg: #029fe2;
+  --calendar-cur-day-color: #fefefe;
+
+  --contact-bg-left-color: #c5c5c5;
+  --contact-bg-right-color: #dfdfe0;
+
+  --textarea-color: #fff;
+
+  --footer-bg: #dadbdb;
+
+  --mobile-menu-color: #fefefe;
+  --mobile-menu-bg: #212121;
+}

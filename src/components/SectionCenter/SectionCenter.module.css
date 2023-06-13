@@ -1,0 +1,210 @@
+.Section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  padding-top: 50px;
+}
+.SectionContainer {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .SectionContainer {
+    flex-direction: column;
+  }
+}
+.SliderItem {
+  height: 100%;
+  width: 100%;
+}
+.Title {
+  font-size: 35px;
+  color: #029fe2;
+  text-align: right;
+  font-weight: bold;
+  padding-left: 15px;
+  width: 25%;
+}
+
+.Left {
+  width: 34%;
+  height: 100%;
+  padding-left: 15px;
+  padding-bottom: 60px;
+}
+
+.LeftContent {
+  padding-left: 20px;
+  padding-top: 20px;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.Date {
+  color: var(--green-color);
+  margin-top: 70px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.Subtitle {
+  font-size: 1.6rem;
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.Text {
+  flex-grow: 1;
+  margin-top: 20px;
+  max-height: 60vh;
+  overflow: auto;
+  font-size: 1.4rem;
+  white-space: pre-wrap;
+}
+
+.Text a {
+  text-decoration: underline;
+}
+
+.Text::-webkit-scrollbar {
+   width: 6px;
+   height: 6px;
+ }
+.Text::-webkit-scrollbar-track {
+   background: transparent;
+ }
+.Text::-webkit-scrollbar-thumb {
+   background: var(--text-color);
+ }
+.Text::-webkit-scrollbar-thumb:hover {
+   background: var(--text-color);
+ }
+
+@media (max-width: 992px) {
+  .Text {
+    align-items: flex-start;
+    max-height: 37vh;
+    overflow: auto;
+    font-size: 1rem;
+  }
+}
+
+.Right {
+  width: 60%;
+  height: 100%;
+  margin: auto 0;
+  padding-bottom: 40px;
+  padding-right: 40px;
+}
+
+.RightContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.RightContent::after{
+  position: absolute;
+  content: '';
+  bottom: -6px;
+  width: 100%;
+  height: 4px;
+  background: var(--text-color);
+}
+.Triangle {
+  position: absolute;
+  width: 150px;
+  bottom: -2px;
+  left: 0;
+}
+
+.Image {
+  min-width: 30vw;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 991px) {
+  .Triangle {
+    display: none;
+  }
+
+  .SliderItem {
+    height: 350px;
+  }
+
+  .Title {
+    text-align: left;
+    width: 50%;
+  }
+  .Section {
+    height: auto;
+  }
+  .SectionContainer {
+    display: block;
+  }
+
+  .Left {
+    width: 100%;
+    padding-left: 115px;
+  }
+
+  .LeftContent {
+    width: 75%;
+  }
+
+  .Right {
+    width: 100%;
+  }
+
+  .Subtitle {
+    margin-bottom: 40px;
+  }
+
+  .Image {
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    left: 50vw;
+    transform: translateX(-50%) translateY(-80px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Title {
+    font-size: 28px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Title {
+    font-size: 20px;
+  }
+
+  .Left {
+    padding-left: 30px;
+  }
+
+  .LeftContent {
+    width: 86%;
+  }
+
+  .Subtitle {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+
+  .Date {
+    margin-top: 0;
+  }
+}

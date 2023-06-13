@@ -1,0 +1,151 @@
+.notFound {
+  color: var(--green-color);
+  height: 100vh;
+  width: 100vw;
+  background: var(--header-mobi-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  text-align: center;
+}
+
+.notFoundHomeLink {
+  position: absolute;
+  color: var(--text-color);
+  top: 20px;
+  left: 20px;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+@media (max-width: 500px) {
+  .notFound {
+    font-size: 25px;
+  }
+}
+
+.wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background: var(--header-mobi-color);
+  padding: 60px 5vw;
+  color: var(--text-color);
+}
+
+.homeLink {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+}
+
+.info {
+  width: 100%;
+  text-transform: uppercase;
+  padding-right: 80px;
+}
+
+.image {
+  width: 30vw;
+  object-fit: contain;
+}
+
+.title {
+  margin-top: 40px;
+  font-size: 50px;
+}
+
+.date {
+  margin-top: 25px;
+  color: var(--green-color);
+  font-size: 20px;
+}
+
+.description {
+  margin-top: 20px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.description a {
+  text-decoration: underline;
+}
+
+.documents {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.documentsTitle {
+  font-size: 20px;
+  margin-bottom: 18px;
+}
+
+.document {
+  color: var(--text-color);
+  text-decoration: underline;
+}
+
+.documentLink {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.documentLink:hover .documentName {
+  text-decoration: underline;
+}
+
+.documentList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.documentIcon {
+  height: 40px;
+  display: block;
+}
+
+.documentIcon svg,
+.documentIcon path {
+  fill: var(--text-color);
+}
+
+.documentName {
+  color: var(--text-color);
+  max-width: 120px;
+  word-wrap: break-word;
+}
+
+@media (max-width: 911px) {
+  .wrapper {
+    padding: 40px 20px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .image {
+    height: 300px;
+    width: auto;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .date,
+  .description {
+    font-size: 16px;
+  }
+}

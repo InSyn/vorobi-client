@@ -1,0 +1,129 @@
+.Section {
+  padding: 50px 10px;
+  position: relative;
+}
+
+.Triangle {
+  width: 150px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.Title {
+  width: 380px;
+  padding-top: 10px;
+  border-top: 8px solid var(--section-border-color);
+  font-size: 45px;
+  color: #029fe2;
+  text-align: right;
+  font-weight: bold;
+}
+.Content {
+  padding: 0 20px;
+}
+
+.Name {
+  color: var(--green-color);
+  margin-top: 60px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.Like {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  background-color: #030302;
+  padding: 3px 5px;
+}
+.LikeIcon {
+  width: 14px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Count {
+  color: #029fe2;
+  font-size: 14px;
+}
+.Gallery {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 24vw);
+  grid-gap: 5px;
+  grid-template-areas:
+    "b c a a"
+    "d e a a";
+}
+.GalleryImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.GalleryItem1 {
+  grid-area: a;
+  position: relative;
+}
+.GalleryItem2 {
+  grid-area: b;
+  position: relative;
+}
+.GalleryItem3 {
+  grid-area: c;
+  position: relative;
+}
+.GalleryItem4 {
+  grid-area: d;
+  position: relative;
+}
+
+.GalleryItem5 {
+  grid-area: e;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .Title {
+    text-align: left;
+    width: 190px;
+    font-size: 28px;
+  }
+  .Triangle {
+    width: 80px;
+  }
+
+  .Gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 40vw);
+    grid-template-areas:
+      "a a"
+      "a a"
+      "b c"
+      "d e";
+  }
+}
+@media screen and (max-width: 480px) {
+  .Section {
+    padding: 30px 10px;
+  }
+  .Title {
+    font-size: 20px;
+  }
+  .Triangle {
+    width: 50px;
+    right: 10px;
+  }
+
+  .Name {
+    margin-top: 30px;
+  }
+
+  .Content {
+    padding: 0 5px;
+  }
+}
