@@ -14,8 +14,16 @@
 }
 
 .homeLink {
+  display: flex;
+  align-items: center;
   color: var(--text-color);
-  text-decoration: underline;
+  font-size: 2rem;
+  /*text-decoration: underline;*/
+}
+.arrowIcon {
+  margin-right: 8px;
+  transform: rotate(180deg);
+  fill: var(--text-color);
 }
 
 .inputsItem {

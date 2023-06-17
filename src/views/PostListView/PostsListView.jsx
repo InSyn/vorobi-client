@@ -5,6 +5,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { SERVER_ADDRESS } from "../../constants";
 import appState from "../../store/appState";
 import styles from "./PostListView.module.css";
+import Header from "../../components/Header/Header";
+import {ReactComponent as ArrowIcon} from "./../../svg/arrow-icon.svg";
 
 const PostListView = observer(() => {
   const navigate = useNavigate();
@@ -13,6 +15,8 @@ const PostListView = observer(() => {
   const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const delayDebounceHandler = setTimeout(async () => {
       if (searchTerm) {
         const searchRequest = await axios.get(
@@ -37,9 +41,12 @@ const PostListView = observer(() => {
   };
 
   return (
+    <>
+    <Header/>
     <main className={styles.wrapper}>
       <header className={styles.header}>
         <Link to="/" className={styles.homeLink} onClick={handleHomeLinkClick}>
+          <ArrowIcon className={styles.arrowIcon}></ArrowIcon>
           Назад
         </Link>
         <input
@@ -64,6 +71,7 @@ const PostListView = observer(() => {
         ))}
       </div>
     </main>
+    </>
   );
 });
 

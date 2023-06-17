@@ -34,9 +34,16 @@
 }
 
 .homeLink {
+  display: flex;
+  align-items: center;
   font-size: 2rem;
   color: var(--text-color);
-  text-decoration: underline;
+  /*text-decoration: underline;*/
+}
+.arrowIcon {
+  margin-right: 8px;
+  transform: rotate(180deg);
+  fill: var(--text-color);
 }
 
 .content {

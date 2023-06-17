@@ -1,6 +1,5 @@
 import styles from "./Header.module.css";
-import Logo from "./Лого_Воробьи_вверх.png";
-import LogoLight from "./logoLight.png";
+import Logo from "./logo-header.png";
 import Camera from "./Значок_камеры.png";
 import CameraLight from "./cameraLight.png";
 import PlayIcon from "./Кнопка_ТВ.png";
@@ -37,11 +36,7 @@ function Header() {
           <div style={{ display: "flex" }}>
             <Link to="/" className={styles.Logo}>
               <div className={styles.LogoElement}>
-                {theme === "dark-theme" ? (
                   <img src={Logo} alt="logo" />
-                ) : (
-                  <img src={LogoLight} alt="logo" />
-                )}
               </div>
             </Link>
             <Link to="/streams" className={styles.LogoCamera}>

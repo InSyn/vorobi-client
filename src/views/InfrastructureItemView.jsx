@@ -9,6 +9,8 @@ import { ReactComponent as PdfIcon } from "./assets/pdf-icon.svg";
 import { ReactComponent as WordIcon } from "./assets/word-icon.svg";
 import { ReactComponent as FileIcon } from "./assets/file-icon.svg";
 import styles from "./DetailPage.module.css";
+import Header from "../components/Header/Header";
+import {ReactComponent as ArrowIcon} from "./../svg/arrow-icon.svg";
 
 const InfrastructureItemView = observer(() => {
   const [infrastructureItem, setInfrastructureItem] = useState(null);
@@ -16,6 +18,8 @@ const InfrastructureItemView = observer(() => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const infrastructureItem = appState.infrastructureItems.find(
       (infrastructureItem) => infrastructureItem._id === params.id
     );
@@ -31,7 +35,9 @@ const InfrastructureItemView = observer(() => {
 
   if (!infrastructureItem) {
     return (
-      <div className={styles.notFound}>
+    <>
+        <Header />
+        <div className={styles.notFound}>
         <Link
           to="/"
           className={styles.notFoundHomeLink}
@@ -40,14 +46,18 @@ const InfrastructureItemView = observer(() => {
           На главную
         </Link>
         Страница не найдена
-      </div>
+        </div>
+    </>
     );
   }
 
   return (
+    <>
+    <Header />
     <main className={styles.wrapper}>
       <header>
         <Link to="/" className={styles.homeLink} onClick={handleHomeLinkClick}>
+          <ArrowIcon className={styles.arrowIcon}></ArrowIcon>
           Назад
         </Link>
       </header>
@@ -106,6 +116,7 @@ const InfrastructureItemView = observer(() => {
         </aside>
       ) : null}
     </main>
+    </>
   );
 });
 

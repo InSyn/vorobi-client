@@ -3,6 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import appState from "../store/appState";
 import { formatDate } from "../utils/formateDate";
 import styles from "./VKTvView.module.css";
+import {useEffect} from "react";
+import Header from "../components/Header/Header";
 
 const VKTvView = observer(() => {
   const navigate = useNavigate();
@@ -13,7 +15,13 @@ const VKTvView = observer(() => {
     navigate(-1);
   };
 
+  useEffect(()=>{
+      window.scrollTo(0, 0);
+  }, [])
+
   return (
+    <>
+    <Header/>
     <main className={styles.wrapper}>
       <header>
         <Link to="/" className={styles.homeLink} onClick={handleHomeLinkClick}>
@@ -34,6 +42,7 @@ const VKTvView = observer(() => {
         ))}
       </div>
     </main>
+    </>
   );
 });
 

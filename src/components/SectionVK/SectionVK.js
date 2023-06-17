@@ -9,6 +9,7 @@ import Like from "./Like.png";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { SERVER_ADDRESS } from "../../constants";
+import {Link} from "react-router-dom";
 
 // const FALLBACK_PHOTOS = [
 //   { url: img1, likes: 5 },
@@ -18,25 +19,20 @@ import { SERVER_ADDRESS } from "../../constants";
 //   { url: img5, likes: 34 },
 // ];
 
-let isPhotosRequestDone = false;
-
 function SectionVK() {
   const [photos, setPhotos] = useState([]);
 
   useEffect(() => {
-    if (!isPhotosRequestDone) {
+    if (photos.length === 0) {
       (async () => {
-        isPhotosRequestDone = true;
-
-        const photos = (await axios.get(`${SERVER_ADDRESS}/api/vk-photos`))
-          .data;
+        const photos = (await axios.get(`${SERVER_ADDRESS}/api/vk-photos`)).data
 
         if (!photos.error) {
           setPhotos(photos.photos);
         }
       })();
     }
-  }, []);
+  });
 
   return (
     <section className={styles.Section} id="vk">
@@ -50,7 +46,7 @@ function SectionVK() {
         >
           @vorobiski
         </a>
-        <div className={styles.Gallery}>
+        <Link to="https://vk.com/albums-215673652" target="_blank" className={styles.Gallery}>
           {photos.map(({ url, likes }, index) => (
             <div className={styles[`GalleryItem${index + 1}`]} key={url}>
               <img
@@ -66,7 +62,7 @@ function SectionVK() {
               </div>
             </div>
           ))}
-        </div>
+        </Link>
       </div>
       <div className={styles.Triangle}>
         <img src={Triangle} alt="" />

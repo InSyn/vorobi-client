@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import appState from "../../store/appState";
 import styles from "./EventsListView.module.css";
+import Header from "../../components/Header/Header";
+import {ReactComponent as ArrowIcon} from "./../../svg/arrow-icon.svg";
 
 const EventsListView = observer(() => {
   const navigate = useNavigate();
@@ -13,9 +15,10 @@ const EventsListView = observer(() => {
   const [searchYear, setSearchYear] = useState(2023);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     if (!isNaN(+searchDay) && !isNaN(+searchMonth) && !isNaN(+searchYear)) {
       const searchDate = new Date(searchYear, searchMonth - 1, searchDay - 1);
-
       setFoundEvents(
         appState.events.filter((event) => {
           const eventDate = new Date(event.date);
@@ -27,6 +30,9 @@ const EventsListView = observer(() => {
         })
       );
     }
+
+    if (foundEvents.length === 0)
+      setFoundEvents(appState.events)
   }, [searchDay, searchMonth, searchYear]);
 
   const handleHomeLinkClick = (event) => {
@@ -44,9 +50,12 @@ const EventsListView = observer(() => {
   }, []);
 
   return (
+    <>
+    <Header />
     <main className={styles.wrapper}>
       <header className={styles.header}>
         <Link to="/" className={styles.homeLink} onClick={handleHomeLinkClick}>
+          <ArrowIcon className={styles.arrowIcon}></ArrowIcon>
           Назад
         </Link>
         <div className={styles.inputsGroup}>
@@ -98,6 +107,7 @@ const EventsListView = observer(() => {
         ))}
       </div>
     </main>
+    </>
   );
 });
 

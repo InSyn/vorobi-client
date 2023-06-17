@@ -19,6 +19,9 @@
 
   --mobile-menu-color: #212121;
   --mobile-menu-bg: #fefefe;
+
+  --blue-light: #029fe2;
+  --blue-hovered: #0285C6;
 }
 
 .LightTheme {
@@ -42,4 +45,7 @@
 
   --mobile-menu-color: #fefefe;
   --mobile-menu-bg: #212121;
+
+  --blue-light: #029fe2;
+  --blue-hovered: #18AAE2;
 }

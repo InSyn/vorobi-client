@@ -23,15 +23,24 @@
 }
 .Title {
   font-size: 35px;
-  color: #029fe2;
+  color: var(--blue-light);
   text-align: right;
   font-weight: bold;
   padding-left: 15px;
-  width: 25%;
+  width: 50%;
+}
+.Title a {
+  color: var(--blue-light);
+  text-decoration: underline;
+
+  transition: color 92ms;
+}
+.Title a:hover {
+  color: var(--blue-hovered);
 }
 
 .Left {
-  width: 34%;
+  width: 45%;
   height: 100%;
   padding-left: 15px;
   padding-bottom: 60px;
@@ -61,7 +70,7 @@
 
 .Text {
   flex-grow: 1;
-  margin-top: 20px;
+  margin: 20px 16px 0 0;
   max-height: 60vh;
   overflow: auto;
   font-size: 1.4rem;
@@ -73,7 +82,7 @@
 }
 
 .Text::-webkit-scrollbar {
-   width: 6px;
+   width: 16px;
    height: 6px;
  }
 .Text::-webkit-scrollbar-track {
@@ -84,7 +93,32 @@
  }
 .Text::-webkit-scrollbar-thumb:hover {
    background: var(--text-color);
- }
+ }/* Buttons */
+.Text::-webkit-scrollbar-button:single-button {
+  background-color: transparent;
+  display: block;
+  border-style: solid;
+  height: 13px;
+  width: 16px;
+}
+/* Up */
+.Text::-webkit-scrollbar-button:single-button:vertical:decrement {
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent var(--text-color) transparent;
+}
+
+.Text::-webkit-scrollbar-button:single-button:vertical:decrement:hover {
+  border-color: transparent transparent var(--text-color) transparent;
+}
+/* Down */
+.Text::-webkit-scrollbar-button:single-button:vertical:increment {
+  border-width: 8px 8px 0 8px;
+  border-color: var(--text-color) transparent transparent transparent;
+}
+
+.Text::-webkit-scrollbar-button:vertical:single-button:increment:hover {
+  border-color: var(--text-color) transparent transparent transparent;
+}
 
 @media (max-width: 992px) {
   .Text {
@@ -96,7 +130,7 @@
 }
 
 .Right {
-  width: 60%;
+  width: 50%;
   height: 100%;
   margin: auto 0;
   padding-bottom: 40px;

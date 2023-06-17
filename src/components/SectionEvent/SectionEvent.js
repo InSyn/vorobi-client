@@ -6,6 +6,7 @@ import { formatDate } from "../../utils/formateDate";
 import Calendar from "../Calendar/Calendar";
 import styles from "./SectionEvent.module.css";
 import Triangle from "./triangle.png";
+import {ReactComponent as ArrowIcon} from "./../../svg/arrow-icon.svg";
 
 const SectionEvent = observer(() => {
   const [activeEvents, setActiveEvents] = useState([]);
@@ -13,10 +14,13 @@ const SectionEvent = observer(() => {
 
   useEffect(() => {
     const TODAY_DATE = new Date().toDateString();
+    // const TODAY_DATE_TIMESTAMP = Date.parse(new Date().toDateString());
 
     setActiveEvents(
       appState.events.filter(
-        (event) => new Date(event.date).toDateString() === TODAY_DATE
+        (event) => {
+          return  new Date(event.date).toDateString() === TODAY_DATE
+        }
       )
     );
     // eslint-disable-next-line
@@ -45,6 +49,7 @@ const SectionEvent = observer(() => {
                   key={event._id}
                 >
                   {event.title}
+                  <ArrowIcon className={styles.arrowIcon}/>
                 </Link>
               ))
             ) : (

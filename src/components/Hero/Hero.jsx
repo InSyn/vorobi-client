@@ -4,7 +4,7 @@ import Meteo from "./Meteo";
 // import bgImage1 from "./assets/hero-1.jpg";
 // import bgImage2 from "./assets/hero-2.jpg";
 // import bgImage3 from "./assets/hero-3.jpg";
-import bgVideo from  "./assets/bg_video.webm"
+import bgVideo from  "./assets/bg_video.mp4"
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 
@@ -20,7 +20,7 @@ function Hero() {
   return (
     <section className={styles.Hero}>
       <div className={styles.bg} data-active-image-index={activeBgImage}>
-        <video autoPlay muted loop id="myVideo"
+        <video id="myVideo" autoPlay muted playsInline={true} loop controls={false} preload='auto'
                className={classNames(styles.bgImage, styles.bgImage1)}>
           <source src={bgVideo} type="video/mp4"></source>
         </video>

@@ -32,9 +32,9 @@ function SectionContact() {
                 <iframe
                     className={styles.LocationYaMap}
                     title="YaLocation"
-                    src="https://yandex.uz/map-widget/v1/?ll=93.442,56.1174&z=16"
+                    src="https://yandex.uz/map-widget/v1/?ll=93.442,56.1174&mode=search&oid=213765788301&ol=biz&source=mapframe&utm_source=mapframe&z=15"
                     width="100%"
-                    height="260"
+                    height="275"
                 >
                 </iframe>
               </div>

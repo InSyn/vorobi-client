@@ -14,13 +14,21 @@
   margin-top: 40px;
 }
 .ListItem {
+  padding: 8px 16px;
   color: var(--green-color);
   font-size: 22px;
   margin-bottom: 18px;
+  border: 1px solid var(--green-color);
+}
+.ListItemText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: inherit;
 }
 
 .Left {
-  width: 30%;
+  width: 50%;
   height: 100%;
   padding-left: 15px;
   padding-top: 10px;
@@ -32,8 +40,13 @@
   border-top: 8px solid var(--section-border-color);
 }
 .Right {
-  width: 70%;
+  width: 50%;
   height: 100%;
+}
+
+.ArrowIcon {
+  margin-left: auto;
+  fill: var(--green-color);
 }
 
 @media screen and (max-width: 991px) {

@@ -10,6 +10,8 @@ import { ReactComponent as PdfIcon } from "./assets/pdf-icon.svg";
 import { ReactComponent as WordIcon } from "./assets/word-icon.svg";
 import { ReactComponent as FileIcon } from "./assets/file-icon.svg";
 import styles from "./DetailPage.module.css";
+import Header from "../components/Header/Header";
+import {ReactComponent as ArrowIcon} from "./../svg/arrow-icon.svg";
 
 const PostView = observer(() => {
   const [post, setPost] = useState(null);
@@ -17,6 +19,8 @@ const PostView = observer(() => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const post = appState.posts.find((post) => post._id === params.id);
 
     setPost(post);
@@ -44,9 +48,12 @@ const PostView = observer(() => {
   }
 
   return (
+    <>
+    <Header/>
     <main className={styles.wrapper}>
       <header>
         <Link to="/" className={styles.homeLink} onClick={handleHomeLinkClick}>
+          <ArrowIcon className={styles.arrowIcon}></ArrowIcon>
           Назад
         </Link>
       </header>
@@ -104,6 +111,7 @@ const PostView = observer(() => {
         </aside>
       ) : null}
     </main>
+    </>
   );
 });
 

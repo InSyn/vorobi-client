@@ -5,6 +5,8 @@ import appState from "../../store/appState";
 import SliderCarousel from "../Slider/Slider";
 import styles from "./SectionInfrastructure.module.css";
 import Triangle from "./Triangle.png";
+import {ReactComponent as ArrowIcon} from "./../../svg/arrow-icon.svg";
+
 const SectionInfrastructure = observer(() => {
   return (
     <section className={styles.Section} id="infrastructure">
@@ -15,10 +17,12 @@ const SectionInfrastructure = observer(() => {
             {appState.infrastructureItems.map((item, i_idx) => (
               <li className={styles.ListItem} key={i_idx}>
                 <Link
+                  className={styles.ListItemText}
                   to={`/infrastructure/${item._id}`}
-                  style={{ textDecoration: "underline", color: "inherit" }}
                 >
                   {item.title}
+
+                  <ArrowIcon className={styles.ArrowIcon} />
                 </Link>
               </li>
             ))}

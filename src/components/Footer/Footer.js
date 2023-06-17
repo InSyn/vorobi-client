@@ -44,7 +44,7 @@ function Footer() {
         <div className={styles.Address}>
           Красноярский край,
           <br />
-          п. Подгорный, ул. Черемуховая
+          п. Подгорный, ул. Черемуховая 16
         </div>
       </div>
       <div className={styles.Center}>

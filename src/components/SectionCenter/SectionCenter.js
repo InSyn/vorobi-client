@@ -15,7 +15,6 @@ const SectionCenter = observer(() => {
       <h1 className={styles.Title}>
         <Link
           to="/posts"
-          style={{ textDecoration: "underline", color: "#029fe2" }}
         >
           ПРЕСС-ЦЕНТР
         </Link>

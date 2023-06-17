@@ -14,16 +14,16 @@
 }
 
 .Left {
-  width: 40%;
+  width: 50%;
   height: 100%;
   padding-left: 15px;
   padding-top: 40px;
 }
 
 .Right {
-  width: 75%;
+  width: 45%;
   height: 100%;
-
+  margin: 0 auto;
   padding-right: 40px;
 }
 .RightContent {
@@ -45,9 +45,14 @@
 }
 .Title {
   font-size: 35px;
-  color: #029fe2;
+  color: var(--blue-light);
   text-align: right;
   font-weight: bold;
+
+  transition: color 92ms;
+}
+.Title:hover {
+  color: var(--blue-hovered);
 }
 
 .LeftDate {
@@ -67,11 +72,14 @@
 }
 
 .Event {
+  display: flex;
+  align-items: center;
   font-size: 1.6rem;
   width: 100%;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.1);
-  text-decoration: underline;
+  /*background: rgba(255, 255, 255, 0.1);*/
+  border: 1px solid var(--text-color);
+  /*text-decoration: underline;*/
   color: var(--text-color);
 }
 
@@ -81,6 +89,11 @@
   display: flex;
   align-items: center;
   font-size: 1.6rem;
+}
+
+.arrowIcon {
+  margin-left: auto;
+  fill: var(--text-color);
 }
 
 @media screen and (max-width: 1100px) {

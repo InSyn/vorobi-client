@@ -49,7 +49,7 @@
 .Coords {
   position: absolute;
   right: 40px;
-  bottom: 30px;
+  bottom: 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;

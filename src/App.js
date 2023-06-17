@@ -27,7 +27,6 @@ function App() {
     (async () => {
       const data = (await axios.get(`${SERVER_ADDRESS}/api/get-data`)).data;
 
-      console.log(data)
       appState.setEvents(data.events);
       appState.setPosts(data.posts);
       appState.setVKTvItems(data.VKTvItems);
