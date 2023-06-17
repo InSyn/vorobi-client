@@ -5,6 +5,7 @@ import { formatDate } from "../utils/formateDate";
 import styles from "./VKTvView.module.css";
 import {useEffect} from "react";
 import Header from "../components/Header/Header";
+import {ReactComponent as ArrowIcon} from "./../svg/arrow-icon.svg";
 
 const VKTvView = observer(() => {
   const navigate = useNavigate();
@@ -25,6 +26,7 @@ const VKTvView = observer(() => {
     <main className={styles.wrapper}>
       <header>
         <Link to="/" className={styles.homeLink} onClick={handleHomeLinkClick}>
+          <ArrowIcon className={styles.arrowIcon}></ArrowIcon>
           Назад
         </Link>
       </header>

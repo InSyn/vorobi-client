@@ -6,6 +6,7 @@
   --section-border-color: #fefefe;
 
   --green-color: #d7fd3d;
+  --green-color-hovered: #B2D83B;
 
   --calendar-cur-day-bg: transparent;
   --calendar-cur-day-color: #029fe2;
@@ -32,6 +33,7 @@
   --section-border-color: #8e8586;
 
   --green-color: #a4c71a;
+  --green-color-hovered: #7F9D18;
 
   --calendar-cur-day-bg: #029fe2;
   --calendar-cur-day-color: #fefefe;

@@ -52,11 +52,11 @@ ul {
 
 .slick-prev:hover span,
 .slick-next:hover span {
-  color: var(--textarea-color);
+  color: var(--green-color-hovered);
 }
 .slick-prev:hover svg,
 .slick-next:hover svg {
-  fill: var(--textarea-color);}
+  fill: var(--green-color-hovered);}
 
 .arrow svg {
   height: 48px;
@@ -64,7 +64,7 @@ ul {
 .arrow span {
   height: auto;
   font-size: 1.4rem;
-  color: var(--text-color);
+  color: var(--green-color);
 }
 
 .slick-prev svg {
@@ -76,17 +76,18 @@ ul {
 
 .news .slick-prev,
 .news .slick-next {
-  top: auto !important;
-  bottom: 0 !important;
+  top: 100px !important;
+  /*bottom: 0 !important;*/
+  border: 1px solid var(--green-color);
 }
 
 .news .slick-prev {
-  left: 35px !important;
+  left: 120px !important;
   right: auto !important;
 }
 
 .news .slick-next {
-  left: 235px !important;
+  left: 520px !important;
   right: auto !important;
 }
 

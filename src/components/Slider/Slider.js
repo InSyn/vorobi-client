@@ -8,6 +8,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../../Theme";
 import "./Slider.css";
 import cn from "classnames";
+import {ReactComponent as ArrowIcon} from "./../../svg/arrow-icon.svg";
 
 function SliderCarousel({ children }) {
   const { theme } = useContext(ThemeContext);
@@ -16,12 +17,12 @@ function SliderCarousel({ children }) {
       <div onClick={onClick} className={cn("arrow", className)}>
         {theme === "dark-theme" ? (
           <>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill='#ffffff'><title>menu-left</title><path d="M14,7L9,12L14,17V7Z" /></svg>
+            <ArrowIcon/>
             <span>Назад</span>
           </>
         ) : (
           <>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill='#000000'><title>menu-left</title><path d="M14,7L9,12L14,17V7Z" /></svg>
+            <ArrowIcon/>
             <span>Назад</span>
           </>
         )}
@@ -34,12 +35,12 @@ function SliderCarousel({ children }) {
         {theme === "dark-theme" ? (
           <>
             <span>Далее</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill='#ffffff'><title>menu-right</title><path d="M10,17L15,12L10,7V17Z" /></svg>
+            <ArrowIcon/>
           </>
         ) : (
           <>
             <span>Далее</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill='#000000'><title>menu-right</title><path d="M10,17L15,12L10,7V17Z" /></svg>
+            <ArrowIcon/>
           </>
         )}
       </div>

@@ -19,6 +19,12 @@
   font-size: 22px;
   margin-bottom: 18px;
   border: 1px solid var(--green-color);
+
+  transition: color 192ms, border 192ms;
+}
+.ListItem:hover {
+  color: var(--green-color-hovered);
+  border: 1px solid var(--green-color-hovered);
 }
 .ListItemText {
   width: 100%;
@@ -47,6 +53,11 @@
 .ArrowIcon {
   margin-left: auto;
   fill: var(--green-color);
+
+  transition: all 192ms;
+}
+.ListItem:hover .ArrowIcon {
+  fill: var(--green-color-hovered);
 }
 
 @media screen and (max-width: 991px) {
