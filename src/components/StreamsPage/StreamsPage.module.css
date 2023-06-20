@@ -1,26 +1,35 @@
 .container {
-  display: flex;
-  padding: 80px 40px;
-  min-height: 100vh;
-  background: var(--header-mobi-color);
-  justify-content: space-between;
-  align-items: center;
   position: relative;
+  display: flex;
   gap: 80px;
+  min-height: calc(100vh - 70px);
+  padding: 120px 40px 80px;
+  background: var(--header-mobi-color);
+}
+
+.cameraFrameWrapper {
+  flex: 1 0 auto;
+}
+.cameraFrameWrapper h2 {
+  margin-bottom: 12px;
+  color: var(--text-color);
 }
 
 .frame {
-  width: 50%;
+  width: 100%;
   aspect-ratio: 16 / 9;
 }
 
 .backLink {
   position: absolute;
-  color: var(--text-color);
   top: 20px;
   left: 20px;
-  text-decoration: underline;
-  font-size: 20px;
+  color: var(--text-color);
+  font-size: 2rem;
+}
+.backLink svg {
+  margin-right: 12px;
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 911px) {

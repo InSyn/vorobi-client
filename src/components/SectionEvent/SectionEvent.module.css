@@ -58,7 +58,7 @@
 .LeftDate {
   font-size: 1.8rem;
   color: var(--green-color);
-  margin-top: 15px;
+  margin-bottom: 18px;
 }
 
 .Events {
@@ -71,6 +71,9 @@
   overflow: auto;
 }
 
+.EventWrapper {
+  margin: auto 0;
+}
 .Event {
   display: flex;
   align-items: center;
@@ -82,10 +85,13 @@
   /*text-decoration: underline;*/
   color: var(--text-color);
 }
+.EventDate {
+  margin-bottom: 18px;
+  font-size: 1.4rem;
+}
 
 .EventsPlaceholder {
-  height: 100%;
-  flex-grow: 1;
+  margin: auto 0;
   display: flex;
   align-items: center;
   font-size: 1.6rem;
@@ -114,7 +120,12 @@
   }
 
   .Event {
+    padding: 10px;
     font-size: 16px;
+  }
+
+  .EventWrapper {
+    margin-bottom: 1rem;
   }
 
   .EventsPlaceholder {
@@ -185,7 +196,10 @@
     right: 10px;
   }
   .LeftDate {
-    font-size: 16px;
+    font-size: 1.4rem;
+  }
+  .EventDate {
+    font-size: 1rem;
   }
 }
 @media screen and (max-width: 480px) {
